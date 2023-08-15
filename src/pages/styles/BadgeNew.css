@@ -1,0 +1,32 @@
+.BadgeNew__container {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.BadgeNew__right {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.068);
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+}
+
+.BadgeNew__field {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #f8fafc;
+  border: 1px solid var(--text-300);
+  border-radius: 0.4rem;
+  padding: 1rem 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--text-600);
+}
+
+@media (min-width: 600px) {
+  .BadgeNew__container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 4rem;
+  }
+}

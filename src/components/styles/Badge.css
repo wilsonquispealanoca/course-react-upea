@@ -1,0 +1,153 @@
+.Badge {
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  padding: 1.2rem;
+  background-color: #ffffffb3;
+  height: auto;
+}
+
+.Badge__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  background: white;
+  border-radius: 0 0 1rem 1rem;
+  line-height: 2.6rem;
+  padding: 1.6rem 2.4rem;
+}
+
+.Badge__header {
+  border-radius: 1rem 1rem 0 0;
+  height: 16rem;
+  background: linear-gradient(
+    to right,
+    var(--gradient-top),
+    var(--gradient-bottom)
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.Badge__header-loading {
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem 1rem 0 0;
+  height: 12rem;
+}
+
+.Badge__title {
+  background: var(--gradient-top);
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-top) 30%,
+    var(--gradient-bottom) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.Badge__section-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.Badge__section-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  background: white;
+}
+
+.Badge__description {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-600);
+}
+
+.Badge__description-loading {
+  background: var(--text-300);
+  width: 20rem;
+  height: 1.8rem;
+}
+
+.skeleton {
+  background-image: linear-gradient(
+    90deg,
+    var(--text-300) 0px,
+    white 40px,
+    var(--text-300) 80px
+  );
+  background-size: 300%;
+  background-position: 100% 0;
+  border-radius: 2rem;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.Badge__avatar {
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.Badge__avatar-loading {
+  border: 1px solid var(--text-300);
+  width: 8rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.Badge__footer {
+  background: var(--gradient-top);
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-top) 30%,
+    var(--gradient-bottom) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.Badge__section-footer {
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+}
+
+.Badge__username {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-900);
+}
+
+.Badge__username-loading {
+  width: 10rem;
+  height: 1rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .Badge__avatar {
+    width: 12rem;
+    height: 12rem;
+  }
+}

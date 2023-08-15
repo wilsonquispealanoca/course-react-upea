@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --text-900: #252f3d;
+  --text-600: #7c899c;
+  --text-500: #8fa3bf;
+  --text-300: #dae4f2;
+  --text-200: #e6edf7;
+
+  --gradient-top: #176feb;
+  --gradient-bottom: #ff80ff;
+
+  --light: #dae4f2;
+  --light-2: #cce1ff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+/* Here we apply this font size %, and then work with the relative unit rem so that the equivalence with px is 1rem = 10px. */
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  color: var(--text-black);
+  background: linear-gradient(
+    to right,
+    var(--gradient-top),
+    var(--gradient-bottom)
+  );
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background: white;
+  width: 100%;
+  height: 10rem;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+textarea {
+  resize: none;
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
