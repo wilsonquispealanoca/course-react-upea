@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
 import LogoImage from "../assets/logo.png";
+import LogoImageDesktop from "../assets/logoDesktop.png";
 import "./styles/Navbar.css";
+import { useScreenDetector } from "../hooks/useScreenDetector";
 
 function Navbar() {
+  const { isDesktop, isMobile, isTablet } = useScreenDetector();
+
   return (
     <nav>
       <div className="container">
         <div className="Navbar__container">
-          <div className="Navbar__brand">
-            <img src={LogoImage} alt="" />
-          </div>
+          <Link to={`/`}>
+            <div className="Navbar__brand">
+              {isMobile && <img src={LogoImage} alt="logo" />}
+              {isTablet && <img src={LogoImageDesktop} alt="logo" />}
+              {isDesktop && <img src={LogoImageDesktop} alt="logo" />}
+            </div>
+          </Link>
           <button className="Navbar__menu">
             <span>
               <svg
@@ -21,8 +29,8 @@ function Navbar() {
                 <path
                   fill="none"
                   stroke="#8fa3bf"
-                  strokeLineCap="round"
-                  strokeLineJoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth="2"
                   d="M3 12h18M3 6h18M3 18h18"
                 />
@@ -31,10 +39,14 @@ function Navbar() {
           </button>
           <ul className="Navbar__links">
             <li>
-              <Link to={`/`}>Home</Link>
+              <Link to={`/`} className="Navbar__links-item">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to={`/badges`}>Badges</Link>
+              <Link to={`/badges`} className="Navbar__links-item">
+                Badges
+              </Link>
             </li>
           </ul>
         </div>

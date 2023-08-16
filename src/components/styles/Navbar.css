@@ -32,4 +32,15 @@
   .Navbar__menu {
     display: none;
   }
+
+  .Navbar__links {
+    display: flex;
+    gap: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .Navbar__links-item {
+    color: var(--text-900);
+  }
 }

@@ -51,7 +51,8 @@ img {
   height: auto;
 }
 
-input {
+input,
+textarea {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -73,5 +74,8 @@ textarea {
   .container {
     width: 80%;
     margin: 0 auto;
+  }
+  table {
+    width: 100%;
   }
 }

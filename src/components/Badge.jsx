@@ -5,24 +5,10 @@ import avatarDefault from "../assets/avatarDefault.png";
 import "./styles/Badge.css";
 
 function Badge({ name, hashtag, description, userName, isLoading }) {
-  let classesImg = `${
-    isLoading === false ? "Badge__header-loading skeleton" : "Badge__header"
-  }`;
-
-  let classesDescription = `${
-    isLoading === false
-      ? "Badge__description-loading skeleton"
-      : "Badge__description"
-  }`;
-
-  let classesUserName = `${
-    isLoading === false ? "Badge__username-loading skeleton" : "Badge__username"
-  }`;
-
   return (
     <>
       <div className="Badge">
-        <div className={classesImg}>
+        <div className="Badge__header">
           <img
             src={isLoading === false ? logoLoading : badgeImage}
             alt="Logo de la conferencia"
@@ -43,28 +29,13 @@ function Badge({ name, hashtag, description, userName, isLoading }) {
                 alt="Avatar"
               />
             )}
-
             <h3 className="Badge__title">{name}</h3>
           </div>
-
           <div className="Badge__description">
-            {isLoading === false ? (
-              <div className={classesDescription}></div>
-            ) : (
-              <div>{description}</div>
-            )}
-
-            {isLoading === false ? (
-              <div className={classesUserName}></div>
-            ) : (
-              <strong>{userName}</strong>
-            )}
+            <div Badge__description>{description}</div>
+            <strong className="Badge__username">{userName}</strong>
           </div>
-          {isLoading === false ? (
-            <div className="Badge__section-footer skeleton"></div>
-          ) : (
-            <span className="Badge__footer">#{hashtag}</span>
-          )}
+          <span className="Badge__footer">#{hashtag}</span>
         </div>
       </div>
     </>

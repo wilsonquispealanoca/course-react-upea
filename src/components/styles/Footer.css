@@ -1,0 +1,18 @@
+.Footer__container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 10rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.Footer__title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--text-600);
+}
