@@ -17,9 +17,13 @@ const useInitialState = () => {
 
   const [listUser, setListUser] = useState([]);
 
-  const handleSaveData = () => {
+  const handleSaveData = (e) => {
+    e.preventDefault();
     setListUser([...listUser, usuario]);
+  };
 
+  const handleCleanData = (e) => {
+    e.preventDefault();
     //Limpiar el formulario
     setUsuario({
       nameUser: "",
@@ -28,7 +32,14 @@ const useInitialState = () => {
       username: "",
     });
   };
-  return { usuario, handleInputChange, listUser, handleSaveData };
+
+  return {
+    usuario,
+    handleInputChange,
+    listUser,
+    handleSaveData,
+    handleCleanData,
+  };
 };
 
 export default useInitialState;

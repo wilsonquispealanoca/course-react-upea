@@ -9,47 +9,45 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="container">
-        <div className="Navbar__container">
-          <Link to={`/`}>
-            <div className="Navbar__brand">
-              {isMobile && <img src={LogoImage} alt="logo" />}
-              {isTablet && <img src={LogoImageDesktop} alt="logo" />}
-              {isDesktop && <img src={LogoImageDesktop} alt="logo" />}
-            </div>
-          </Link>
-          <button className="Navbar__menu">
-            <span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="none"
-                  stroke="#8fa3bf"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 12h18M3 6h18M3 18h18"
-                />
-              </svg>
-            </span>
-          </button>
-          <ul className="Navbar__links">
-            <li>
-              <Link to={`/`} className="Navbar__links-item">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to={`/badges`} className="Navbar__links-item">
-                Badges
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <div className="Navbar__container">
+        <Link to={`/`}>
+          <div className="Navbar__brand">
+            {isMobile && <img src={LogoImage} alt="logo" />}
+            {isTablet && <img src={LogoImageDesktop} alt="logo" />}
+            {isDesktop && <img src={LogoImageDesktop} alt="logo" />}
+          </div>
+        </Link>
+        <button className="Navbar__menu">
+          <span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="none"
+                stroke="#8fa3bf"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 12h18M3 6h18M3 18h18"
+              />
+            </svg>
+          </span>
+        </button>
+        <ul className="Navbar__links">
+          <li>
+            <Link to={`/`} className="Navbar__links-item">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to={`/badges`} className="Navbar__links-item">
+              Badges
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );

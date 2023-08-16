@@ -9,15 +9,10 @@ import Layout from "../components/Layout";
 import AppContext from "../context/AppContext";
 
 function BadgeNew() {
-  const { usuario, handleInputChange, handleSaveData } = useContext(AppContext);
+  const { usuario, handleInputChange } = useContext(AppContext);
   const [loading, setLoading] = useState(false);
 
   let component;
-
-  function handleClick(e) {
-    e.preventDefault();
-    setLoading(true);
-  }
 
   if (
     usuario.hashtag.length &&
@@ -25,7 +20,11 @@ function BadgeNew() {
     usuario.nameUser.length &&
     usuario.description.length > 5
   ) {
-    component = <BtnPrimary click={handleSaveData} />;
+    component = (
+      <div>
+        <BtnSecondary /> <BtnPrimary />
+      </div>
+    );
   } else {
     component = <BtnDisable />;
   }

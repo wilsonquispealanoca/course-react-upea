@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import badgeImage from "../assets/badgeImage.png";
 import logoLoading from "../assets/logoLoading.png";
 import avatarDefault from "../assets/avatarDefault.png";
 import "./styles/Badge.css";
 
-function Badge({ name, hashtag, description, userName, isLoading }) {
+function Badge({ name, hashtag, description, userName }) {
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <>
       <div className="Badge">
