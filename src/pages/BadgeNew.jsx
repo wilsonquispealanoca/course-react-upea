@@ -10,7 +10,6 @@ import AppContext from "../context/AppContext";
 
 function BadgeNew() {
   const { usuario, handleInputChange } = useContext(AppContext);
-  const [loading, setLoading] = useState(false);
 
   let component;
 
@@ -21,8 +20,9 @@ function BadgeNew() {
     usuario.description.length > 5
   ) {
     component = (
-      <div>
-        <BtnSecondary /> <BtnPrimary />
+      <div className="BadgeNew__separate">
+        <BtnSecondary />
+        <BtnPrimary />
       </div>
     );
   } else {
@@ -76,7 +76,6 @@ function BadgeNew() {
             hashtag={usuario.hashtag}
             description={usuario.description}
             userName={usuario.username}
-            isLoading={loading}
           />
         </div>
       </div>

@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import badgeImage from "../assets/badgeImage.png";
 import logoLoading from "../assets/logoLoading.png";
 import avatarDefault from "../assets/avatarDefault.png";
 import "./styles/Badge.css";
+import AppContext from "../context/AppContext";
 
 function Badge({ name, hashtag, description, userName }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const { isLoading } = useContext(AppContext);
   return (
     <>
       <div className="Badge">
@@ -33,7 +34,7 @@ function Badge({ name, hashtag, description, userName }) {
             <h3 className="Badge__title">{name}</h3>
           </div>
           <div className="Badge__description">
-            <div Badge__description>{description}</div>
+            <div>{description}</div>
             <strong className="Badge__username">{userName}</strong>
           </div>
           <span className="Badge__footer">#{hashtag}</span>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const useInitialState = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [usuario, setUsuario] = useState({
     nameUser: "",
     description: "",
@@ -19,6 +20,7 @@ const useInitialState = () => {
 
   const handleSaveData = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     setListUser([...listUser, usuario]);
   };
 
@@ -31,6 +33,7 @@ const useInitialState = () => {
       hashtag: "",
       username: "",
     });
+    setIsLoading(false);
   };
 
   return {
@@ -39,6 +42,7 @@ const useInitialState = () => {
     listUser,
     handleSaveData,
     handleCleanData,
+    isLoading,
   };
 };
 

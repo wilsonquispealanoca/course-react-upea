@@ -11,6 +11,7 @@
   );
   border-radius: 2rem;
   cursor: pointer;
+  padding: 1rem 2rem;
 }
 
 .Btn__secondary {
